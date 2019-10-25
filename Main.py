@@ -2162,63 +2162,6 @@ class listwidget_2_additems_lrc(QThread):
 
 
 
-    # def run2(self):
-    #     while self.lrc_run:
-    #         try:
-    #             song_lrc = sum_songs[self.lrc_song_name][7]
-    #             if not os.path.exists(r'D:\XiaoU\Deal'):
-    #                 os.makedirs(r'D:\XiaoU\Deal')
-    #             with open('D:\XiaoU\Deal\Lrc.txt', 'w', encoding='utf-8') as f:
-    #                 f.write(song_lrc)
-    #                 f.flush()
-    #                 f.close()
-    #             with open('D:\XiaoU\Deal\Lrc.txt', 'r', encoding='utf-8') as f2:
-    #                 f2.seek(0)
-    #                 for lrc in f2:
-    #                     try:
-    #                         re_lrc = re.compile('^\[.*\](.*)')
-    #                         lrc2 = re.search(re_lrc, lrc)[1]
-    #                         if lrc2 == '':
-    #                             continue
-    #                         self.listview.addItem(lrc2)
-    #                         # self.listview.update()
-    #                     except:
-    #                         pass
-    #                 f2.seek(0)
-    #                 lrc_lasttime = 0
-    #                 for lrc in f2:
-    #                     try:
-    #                         re_lrc = re.compile('^\[.*\](.*)')
-    #                         lrc2 = re.search(re_lrc, lrc)[1]
-    #                         if lrc2 == '':
-    #                             continue
-    #                         re_lrc_time = re.compile('^\[(.*)\]')
-    #                         re_lrc_time_min = re.compile('^(\d*):')
-    #                         re_lrc_time_sec = re.compile(':(\d*)\.')
-    #                         re_lrc_time_ms = re.compile('\.(\d*)')
-    #                         lrc_time = re.search(re_lrc_time, lrc)[1]
-    #                         lrc_time_s = int(re.search(re_lrc_time_min, lrc_time)[1]) * 60 + int(
-    #                             re.search(re_lrc_time_sec, lrc_time)[1]) + int(
-    #                             re.search(re_lrc_time_ms, lrc_time)[1]) / 1000
-    #                         lrc_time_s_pause = lrc_time_s - lrc_lasttime
-    #                         time.sleep(lrc_time_s_pause)
-    #                         index = self.listview.currentRow()
-    #                         self.listview.setCurrentRow(index + 1)
-    #                         self.listview.update()
-    #                         lrc_lasttime = lrc_time_s
-    #                         if self.lrc_run == False:
-    #                             break
-    #
-    #                     except Exception as e1:
-    #                         print('*2*' + e1)
-    #
-    #                 f2.close()
-    #
-    #         except Exception as e:
-    #             print('#1#' + e)
-    #         finally:
-    #             break
-
 
 class Download_Song(QThread):
     down_song_log = pyqtSignal(object)
@@ -3421,7 +3364,7 @@ class Clock(Ui_Form):
                     self.label_8_view.setText('距离预订时间-{}-还剩-{} 秒'.format(conf,last))
                 else:
                     self.label_8_view.setText('{}-时间到了'.format(conf))
-                    self.play_common_list.addMedia(QMediaContent(QUrl.fromLocalFile(r'语音提醒.wav')))
+                    self.play_common_list.addMedia(QMediaContent(QUrl.fromLocalFile(r'./PConfig/PClock.wav')))
                     self.play_common_player.play()
                 if self.play_common_player.position() == self.play_common_player.duration() and self.play_common_player.position() != 0:
                     self.var_8_clock = 0
