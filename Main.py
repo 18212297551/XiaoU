@@ -849,16 +849,6 @@ class Ui_Form(QWidget):  # QMainWindow
 
 
 
-    # 以下是自定义方法
-
-    def test(self, p_int=1):
-        print(1)
-        self.pix_6.save('test.jpg')
-
-
-
-
-
 
     def label_5_space_show(self):
         if self.tabWidget.currentWidget().objectName() == 'tab_5':
