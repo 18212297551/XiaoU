@@ -207,7 +207,8 @@ class UiForm(QWidget):  # QMainWindow
         if warn_close == 4194304:  # yes = 16384
             pass
         else:
-            sys.exit()
+            # sys.exit()
+            quit(1000)
 
 
 

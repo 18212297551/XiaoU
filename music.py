@@ -1,4 +1,4 @@
-from base import *
+from XiaoU.base import *
 
 
 # 音乐下载池

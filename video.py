@@ -1,4 +1,4 @@
-from base import *
+from XiaoU.base import *
 
 video_items = {}  # 搜索过的所有视频信息
 

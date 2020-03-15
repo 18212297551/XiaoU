@@ -1,4 +1,4 @@
-from base import *
+from XiaoU.base import *
 
 
 class Browser(UiForm):

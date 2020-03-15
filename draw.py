@@ -1,4 +1,4 @@
-from base import *
+from XiaoU.base import *
 
 class Draw(UiForm):
     def __init__(self):
@@ -209,7 +209,7 @@ class Draw(UiForm):
         self.var_6_arc = 0
         # 路径
         self.var_6_path = 0
-        print(self.label_6_drawing.size())
+
 
 
     def btn_zoomout_clicked(self):
@@ -227,7 +227,7 @@ class Draw(UiForm):
         self.label_6_drawing.setPixmap(self.pix_6)
         del pp_temp
 
-        print(self.label_6_drawing.size())
+
 
 
     def btn_zoomin_clicked(self):

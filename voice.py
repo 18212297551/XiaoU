@@ -1,4 +1,4 @@
-from base import *
+from XiaoU.base import *
 
 
 syn_items = {}

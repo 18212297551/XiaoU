@@ -1,14 +1,14 @@
 import sys
 
 from PyQt5.QtWidgets import QApplication
-from base import *
-from chat import Chat
-from music import Music
-from video import Video
-from voice import Voice
-from draw import Draw
-from clock import Clock
-from camera import Camera
+from XiaoU.base import *
+from XiaoU.chat import Chat
+from XiaoU.music import Music
+from XiaoU.video import Video
+from XiaoU.voice import Voice
+from XiaoU.draw import Draw
+from XiaoU.clock import Clock
+from XiaoU.camera import Camera
 
 class Main(Clock,Camera,Draw,Voice,Video,Music,Chat):
     def __init__(self):
@@ -33,7 +33,7 @@ class Main(Clock,Camera,Draw,Voice,Video,Music,Chat):
         self.retranslateUi()
 
 
-        qss_main = open(r'XiaoU/xiaou.qss', 'r').read()
+        qss_main = open(r'./PConfig/xiaou.qss', 'r').read()
 
         self.setStyleSheet(qss_main)
 
@@ -74,12 +74,7 @@ class Main(Clock,Camera,Draw,Voice,Video,Music,Chat):
         self.tlBtn_2_download.setText(_translate("Form", "..."))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), _translate("Form", "听曲"))
         # self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_3), _translate("Form", "浏览器"))
-        # # TAB3
-        # self.btn_3_ok.setText(_translate('From', '确定'))
-        # self.btn_3_mv_clear.setText(_translate('Form', '清除'))
-        # self.btn_3_forward.setText(_translate('Form', '前进'))
-        # self.btn_3_reload.setText(_translate('Form', '刷新'))
-        # self.btn_3_back.setText(_translate('From', '后退'))
+
         # tab4
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_4), _translate("From", "语音"))
         self.btn_4_clear.setText(_translate('From', "清除"))

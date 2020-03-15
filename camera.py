@@ -1,4 +1,4 @@
-from base import *
+from XiaoU.base import *
 
 class Camera(UiForm):
     def __init__(self):
